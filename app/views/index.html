@@ -12,7 +12,107 @@
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
+    <p class="govuk-body">This is an example service to help teach people about accessibility issues</p>
+    {{ govukButton({
+      text: "Start now",
+      href: "/start",
+      isStartButton: true
+    }) }}
+    
+    <h2 class="govuk-heading-m">Pages in this prototype</h2>
 
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Page name</th>
+          <th scope="col" class="govuk-table__header">URL</th>
+          <th scope="col" class="govuk-table__header">Issues</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Start page</td>
+          <td class="govuk-table__cell"><a href="/start">/start</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Account page</td>
+          <td class="govuk-table__cell"><a href="/account">/account</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Account complete page</td>
+          <td class="govuk-table__cell"><a href="/account2">/account2</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Personal details</td>
+          <td class="govuk-table__cell"><a href="/question1">/question1</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Type of expense</td>
+          <td class="govuk-table__cell"><a href="/question2">/question2</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"> Was it work-related?</td>
+          <td class="govuk-table__cell"><a href="/question3">/question3</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">What did you buy for lunch?</td>
+          <td class="govuk-table__cell"><a href="/question4">/question4</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Check your answers</td>
+          <td class="govuk-table__cell"><a href="/checkanswers">/checkanswers</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Upload receipt(s)</td>
+          <td class="govuk-table__cell"><a href="/upload">/upload</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Tasklist incomplete page</td>
+          <td class="govuk-table__cell"><a href="/tasklist">/tasklist</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Tasklist complete page</td>
+          <td class="govuk-table__cell"><a href="/tasklist1">/tasklist1</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Confirmation page</td>
+          <td class="govuk-table__cell"><a href="/confirmation">/confirmation</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Confirmation alternative page</td>
+          <td class="govuk-table__cell"><a href="/confirmation1">/confirmation1</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Guidance - allowed</td>
+          <td class="govuk-table__cell"><a href="/guidance">/guidance</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Guidance - how to claim</td>
+          <td class="govuk-table__cell"><a href="/guidance1">/guidance1</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Guidance - when you are reimbursed</td>
+          <td class="govuk-table__cell"><a href="/guidance2">/guidance2</a></td>
+          <td class="govuk-table__cell">Text</td>
+        </tr>
+      </tbody>
+    </table>
+    
     {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>

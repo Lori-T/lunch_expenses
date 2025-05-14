@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Your expense – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       What type of lunch expense are you claiming for?
+      </h1>
+
+      <form class="form" action="/question3" method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="travel" name="expense-type" type="radio" value="Travel">
+                  <label class="govuk-label govuk-radios__label" for="travel">Work-related travel</label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="meeting" name="expense-type" type="radio" value="Meeting">
+                  <label class="govuk-label govuk-radios__label" for="meeting">External meeting</label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="expense-type" type="radio" value="Other">
+                  <label class="govuk-label govuk-radios__label" for="other">Other</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Lunch expense details – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What did you buy for lunch?
+      </h1>
+
+      <form class="form" action="/checkanswers" method="post">
+        
+        {{ govukCharacterCount({
+          name: "lunchItems",
+          id: "lunchItems",
+          maxlength: 200,
+          label: {
+            text: "List the lunch items you bought"
+          },
+          hint: {
+            text: "You can enter up to 200 characters"
+          },
+          textarea: {
+            placeholder: "e.g. sandwich, crisps and drink",
+            rows: 5
+          }
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "How much did it cost?"
+          },
+          hint: {
+            text: "Enter the amount in pounds and pence"
+          },
+          classes: "govuk-input--width-5",
+          id: "lunchCost",
+          name: "lunchCost",
+          type: "text",
+          spellcheck: false,
+          prefix: {
+            text: "£"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

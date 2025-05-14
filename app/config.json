@@ -1,3 +1,9 @@
+
 {
-  "serviceName": "Service name goes here"
+  "serviceName": "Claim lunch expenses",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
 }

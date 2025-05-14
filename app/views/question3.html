@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Expense date – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What date was the lunch expense?
+      </h1>
+
+      <form class="form" action="/question4" method="post">
+
+        <form action="/question4" method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                For example 12 05 2025
+              </legend>
+              <div class="govuk-date-input" id="expense-date">
+                <div class="govuk-date-input__item">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day" name="day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+                <div class="govuk-date-input__item">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="month" name="month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+                <div class="govuk-date-input__item">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="year" name="year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        {{ govukButton({
+          text: "Continue"
+          
+  
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
