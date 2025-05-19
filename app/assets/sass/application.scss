@@ -4,3 +4,8 @@
 // 
 
 // Add extra styles here
+.no-focus-outline:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
