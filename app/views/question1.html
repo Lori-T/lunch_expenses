@@ -79,6 +79,8 @@
 
         if (!staffId.value.trim()) {
           addError('staff-id-group', 'staff-id', 'Enter your staff ID');
+        } else if (!/^\d{5}$/.test(staffId.value.trim())) {
+          addError('staff-id-group', 'staff-id', 'Enter your staff ID in the correct format');
         }
 
         if (!email.value.trim()) {

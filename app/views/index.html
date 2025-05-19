@@ -51,18 +51,20 @@ If the focus state style doesn't have a high enough contrast and it can be reall
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Account page</td>
           <td class="govuk-table__cell"><a href="/account">/account</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Account complete page</td>
           <td class="govuk-table__cell"><a href="/account2">/account2</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Personal details</td>
           <td class="govuk-table__cell"><a href="/question1">/question1</a></td>
           <td class="govuk-table__cell"><p><strong>Missing page title</strong>
 Some screen readers (like JAWS) read the page title out when a page loads. On this page, there is no title, which means a screen reader user is missing context. An example of a possible page title would be the page question, followed by the service name, and followed by whatever it's hosted on - so 'Personal details - Claim lunch expenses- GOV.UK', if it were on GOV.UK.</p>
+  <p><strong>Hint text not descriptive enough</strong>
+On the Staff ID field, users can enter only numbers, on the example staff ID card given to participants this is shown as SLC-12345, users are not made aware of this on the page anywhere.</p>
 <p><strong>Continue button isn’t keyboard focusable</strong>
 You can still get past this page by pressing enter when on the radio buttons, but a user might not know this. They might (understandably) expect that the only way to progress is by submitting enter, and so feel trapped and abandon the service at this point. All interactive elements must be usabled with the keyboard. The fix would be removing the tabindex="-1".</p>
 <p><strong>Insufficient colour contrast of the form hint</strong>
@@ -73,7 +75,7 @@ The colour contrast is way too low for the form hint text. In the Design System,
           <td class="govuk-table__cell">Type of expense</td>
           <td class="govuk-table__cell"><a href="/question2">/question2</a></td>
           <td class="govuk-table__cell"><p><strong>No legend on the radio button</strong>
-          We can visually tell that the buttons relate to the main heading by looking at the page. But, the question isn't linked up to the element in a way that makes sense for users who can't see. For radio buttons and checkboxes, it's important to have a legend element. The fix would be making sure the 'h1' is inside the 'legend', as per the Design System pattern.</p></td>
+          We can visually tell that the buttons relate to the main heading by looking at the page. But, the question isn't linked up to the element in a way that makes sense for users who can't see. For radio buttons and checkboxes, it's important to have a legend element. The fix would be making sure the 'h1' is inside the 'legend', as per the Design System pattern.</p>
         <p><strong>Wrong page title</strong>
          The previous page title was missing, similarly if a page has an incorrect title this can be confusing for users, particularly as this page title is 'confirmation' people might think they have finished the service.</p>
         </tr>
@@ -91,47 +93,49 @@ Sometimes interactive elements can get hidden off screen. It can be confusing fo
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Check your answers</td>
           <td class="govuk-table__cell"><a href="/checkanswers">/checkanswers</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell"><p><strong>Change link - hidden text is incorrect</strong>
+Links needing to make sense out of context. In this component from the Design System, given the change link is just across from the question, it would be unnecessary to have the question visually included in the link. But, we can visually hide text to help people who can't see it.  A sighted user would see 'change', but a screen reader user would hear 'change (whatever the question is)'. However, it's been configured incorrectly here and doesn't include any information on the change links other than the date field.</p></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Upload receipt(s)</td>
           <td class="govuk-table__cell"><a href="/upload">/upload</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Tasklist incomplete page</td>
           <td class="govuk-table__cell"><a href="/tasklist">/tasklist</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Tasklist complete page</td>
           <td class="govuk-table__cell"><a href="/tasklist1">/tasklist1</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Confirmation page</td>
           <td class="govuk-table__cell"><a href="/confirmation">/confirmation</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell"><p><Strong>Use of all uppercase letters</Strong>
+            In the confirmation text and also the page headings, all capital letters have been used. This can cause barriers for people with cognitive disabibilites or dyslexia, although its not a huge problem here as there is not a lot of text, it can be very problematic if large blocks of text are in all capitals.</p></td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Confirmation alternative page</td>
           <td class="govuk-table__cell"><a href="/confirmation1">/confirmation1</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Guidance - allowed</td>
           <td class="govuk-table__cell"><a href="/guidance">/guidance</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Guidance - how to claim</td>
           <td class="govuk-table__cell"><a href="/guidance1">/guidance1</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Guidance - when you are reimbursed</td>
           <td class="govuk-table__cell"><a href="/guidance2">/guidance2</a></td>
-          <td class="govuk-table__cell">Text</td>
+          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
         </tr>
       </tbody>
     </table>
