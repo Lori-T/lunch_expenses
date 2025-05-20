@@ -80,13 +80,13 @@
         if (!staffId.value.trim()) {
           addError('staff-id-group', 'staff-id', 'Enter your staff ID');
         } else if (!/^\d{5}$/.test(staffId.value.trim())) {
-          addError('staff-id-group', 'staff-id', 'Enter your staff ID in the correct format');
+          addError('staff-id-group', 'staff-id', 'Enter your staff ID in the correct format, it should be five numbers.');
         }
 
         if (!email.value.trim()) {
           addError('email-group', 'email', 'Enter your email address');
         } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
-          addError('email-group', 'email', 'Enter an email address in the correct format');
+          addError('email-group', 'email', 'Enter an email address in the correct format, for example, name@example.com');
         }
 
         if (errors.length > 0) {
