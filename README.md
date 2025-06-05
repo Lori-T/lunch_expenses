@@ -8,7 +8,7 @@ This exercise is based on the <a href="https://github.com/ministryofjustice/reco
 <h2>Instructions</h2>
 <p>The answers are on the index page, if you are sharing this with others start from the 'start' page. </p>
 <h3>Materials needed</h3>
-<p>Full validation is not in place yet so for this to work you can use the details from the ID card and receipt. </p>
+<p>Full validation is not in place yet so for this to work properly, you can use the details from the ID card and receipt. If you are doing the exercise in person, you could print the documents out. </p>
 <img src="https://github.com/Lori-T/lunch_expenses/blob/main/app/assets/lunch%20expenses%20ID%20card.png" width="50%" height="50%" alt="staff ID for lunch expenses">
 <strong>Staff ID</strong>
 <ul>  
