@@ -1,7 +1,9 @@
 <h1>Claim lunch expenses</h1>
 <p>Accessibility exercise created using the GOV.UK prototype kit.</p>
 <p>This is a fictional government service, you cannot claim lunch expenses.</p>
+<p>Access at: <a href="https://lunch-expenses.lorithomson.co.uk/">https://lunch-expenses.lorithomson.co.uk/</a>
 <p>password = lunchtime</p>
+
 
 This exercise is based on the <a href="https://github.com/ministryofjustice/record-a-goose-sighting">'Record a Goose sighting' accessibility training tool</a> created by Beverley Newing at Ministry of Justice. 
 
