@@ -5,10 +5,17 @@
 {% endblock %}
 
 {% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Training"
+  },
+  html: "This is not a real service. It has been created for accessibility training purposes only."
+}) }}
   {{ govukBackLink({
     text: "Back",
     href: "javascript:window.history.back()"
   }) }}
+  
 {% endblock %}
 
 {% block content %}

@@ -3,7 +3,30 @@
 {% block pageTitle %}
   Confirmation page – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Training"
+  },
+  html: "This is not a real service. It has been created for accessibility training purposes only."
+}) }}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Department for sustenence",
+        href: "#"
+      },
+      {
+        text: "Claim lunch expenses"
+      }
+    ]
+  }) }}
 
+{% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">
