@@ -46,96 +46,60 @@
       isStartButton: true
     }) }}
 
- <h2 class="govuk-heading-m">Materials needed</h2>
+    {{ govukDetails({
+      summaryText: "Show materials needed",
+      html: '
+        <p class="govuk-body">
+          Full validation is not in place yet so for this to work properly,
+          you can use the details from the ID card and receipt below.
+        </p>
 
-<p class="govuk-body">
-  Full validation is not in place yet so for this to work properly,
-  you can use the details from the ID card and receipt below.
-</p>
+        <p class="govuk-body">
+          Right click each image and save it to your desktop so you can upload it later in the exercise.
+        </p>
 
-<p class="govuk-body">
-  If you are doing the exercise in person, you could print these documents out.
-</p>
+        <div class="govuk-grid-row govuk-!-margin-top-6">
 
-<div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-one-half">
+            <img
+              src="' + asset_path + 'images/lunch%20expenses%20ID%20card.png"
+              alt="Example staff ID card for the lunch expenses exercise"
+              style="max-width:100%; border:1px solid #b1b4b6;"
+            >
 
-  <div class="govuk-grid-column-one-half">
+            <h3 class="govuk-heading-s govuk-!-margin-top-3">Staff ID details</h3>
 
-    <img
-      src="{{ asset_path }}images/lunch%20expenses%20ID%20card.png"
-      alt="Example staff ID card for the lunch expenses exercise"
-      style="max-width:100%; border:1px solid #b1b4b6;"
-    >
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Lori Thomson</li>
+              <li>Accessibility Specialist</li>
+              <li>Staff ID: ABC12345</li>
+              <li>Email: lori@lori.com</li>
+              <li>Phone: 01234 56789</li>
+            </ul>
+          </div>
 
-    <p class="govuk-body govuk-!-margin-top-2">
-      <a href="{{ asset_path }}images/lunch%20expenses%20ID%20card.png" target="_blank">
-        Download the staff ID card
-      </a>
-    </p>
+          <div class="govuk-grid-column-one-half">
+            <img
+              src="' + asset_path + 'images/lunch%20expenses%20reciept.png"
+              alt="Example lunch receipt for the accessibility exercise"
+              style="max-width:100%; border:1px solid #b1b4b6;"
+            >
 
-  </div>
+            <h3 class="govuk-heading-s govuk-!-margin-top-3">Receipt details</h3>
 
-  <div class="govuk-grid-column-one-half">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>From: The Lunch Place</li>
+              <li>Date: 5 May 2025</li>
+              <li>Tomato Soup - £2.50</li>
+              <li>Cheese Toastie - £2.30</li>
+              <li>Diet Coke - £1.70</li>
+              <li>Total: £6.50</li>
+            </ul>
+          </div>
 
-    <img
-      src="{{ asset_path }}images/lunch%20expenses%20reciept.png"
-      alt="Example lunch receipt for the accessibility exercise"
-      style="max-width:100%; border:1px solid #b1b4b6;"
-    >
-
-    <p class="govuk-body govuk-!-margin-top-2">
-      <a href="{{ asset_path }}images/lunch%20expenses%20reciept.png" target="_blank">
-        Download the lunch receipt
-      </a>
-    </p>
-
-  </div>
-
-</div>
-
-<h3 class="govuk-heading-s">Staff ID details</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>Lori Thomson</li>
-  <li>Accessibility Specialist</li>
-  <li>Staff ID: ABC12345</li>
-  <li>Email: lori@lori.com</li>
-  <li>Phone: 01234 56789</li>
-</ul>
-
-<h3 class="govuk-heading-s">Receipt details</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>From: The Lunch Place</li>
-  <li>Date: 5 May 2025</li>
-  <li>Tomato Soup - £2.50</li>
-  <li>Cheese Toastie - £2.30</li>
-  <li>Diet Coke - £1.70</li>
-  <li>Total: £6.50</li>
-</ul>
-
-  </div>
-
-<h3 class="govuk-heading-s">Staff ID details</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>Lori Thomson</li>
-  <li>Accessibility Specialist</li>
-  <li>Staff ID: ABC12345</li>
-  <li>Email: lori@lori.com</li>
-  <li>Phone: 01234 56789</li>
-</ul>
-
-<h3 class="govuk-heading-s">Receipt details</h3>
-
-<ul class="govuk-list govuk-list--bullet">
-  <li>From: The Lunch Place</li>
-  <li>Date: 5 May 2025</li>
-  <li>Tomato Soup - £2.50</li>
-  <li>Cheese Toastie - £2.30</li>
-  <li>Diet Coke - £1.70</li>
-  <li>Total: £6.50</li>
-</ul>
+        </div>
+      '
+    }) }}
     <h2 class="govuk-heading-m">Pages in this prototype</h2>
 
     <table class="govuk-table">
