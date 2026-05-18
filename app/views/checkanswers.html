@@ -4,6 +4,52 @@
   Check your answers – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+
+    /* Intentional accessibility issue:
+       The summary list breaks badly on smaller screens and at high zoom. */
+
+    @media (max-width: 640px) {
+
+      .check-answers-fixed-width {
+        min-width: 900px;
+      }
+
+      .check-answers-summary {
+        width: 880px;
+      }
+
+      /* Break GOV.UK responsive behaviour */
+      .check-answers-summary .govuk-summary-list__row {
+        display: table-row !important;
+      }
+
+      .check-answers-summary .govuk-summary-list__key,
+      .check-answers-summary .govuk-summary-list__value,
+      .check-answers-summary .govuk-summary-list__actions {
+        display: table-cell !important;
+        white-space: nowrap;
+        padding-right: 40px;
+        vertical-align: top;
+      }
+
+      /* Force change links to stay far right */
+      .check-answers-summary .govuk-summary-list__actions {
+        width: 180px;
+        text-align: right;
+      }
+
+      /* Prevent long answers wrapping */
+      .check-answers-summary .govuk-summary-list__value {
+        min-width: 300px;
+      }
+    }
+
+  </style>
+{% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
@@ -12,144 +58,148 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row check-answers-fixed-width">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
       <h1 class="govuk-heading-xl">
         Check your answers before submitting your claim
       </h1>
 
-      {{ govukSummaryList({
-        rows: [
+      <div class="check-answers-summary">
 
-          {
-            key: {
-              text: "Full name"
-            },
-            value: {
-              text: "Lori Thomson"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question1",
-                  text: "Change"
-                
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Staff ID"
-            },
-            value: {
-              text: "ABC-12345"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question1",
-                  text: "Change"
-                  
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Email address"
-            },
-            value: {
-              text: "lori@lori.com"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question1",
-                  text: "Change"
-                
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Expense type"
-            },
-            value: {
-              text: "Work-related"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question2",
-                  text: "Change"
-                  
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Expense date"
-            },
-            value: {
-              text: "5 May 2025"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question3",
-                  text: "Change"
-                  
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Lunch items"
-            },
-            value: {
-              text: "Tomato soup, cheese toastie, Diet Coke"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question4",
-                  text: "Change"
-                  
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Lunch cost"
-            },
-            value: {
-              text: "£6.50"
-            },
-            actions: {
-              items: [
-                {
-                  href: "/question4",
-                  text: "Change",
-                  visuallyHiddenText: "Lunch cost"
-                }
-              ]
-            }
-          }
+        {{ govukSummaryList({
+          rows: [
 
-        ]
-      }) }}
+            {
+              key: {
+                text: "Full name"
+              },
+              value: {
+                text: "Lori Thomson"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question1",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Staff ID"
+              },
+              value: {
+                text: "ABC-12345"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question1",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Email address"
+              },
+              value: {
+                text: "lori@lori.com"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question1",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Expense type"
+              },
+              value: {
+                text: "Work-related travel to Glasgow office for external supplier meeting"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question2",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Expense date"
+              },
+              value: {
+                text: "5 May 2025"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question3",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Lunch items"
+              },
+              value: {
+                text: "Tomato soup, cheese toastie, Diet Coke"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question4",
+                    text: "Change"
+                  }
+                ]
+              }
+            },
+
+            {
+              key: {
+                text: "Lunch cost"
+              },
+              value: {
+                text: "£6.50"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "/question4",
+                    text: "Change",
+                    visuallyHiddenText: "Lunch cost"
+                  }
+                ]
+              }
+            }
+
+          ]
+        }) }}
+
+      </div>
 
       <h2 class="govuk-heading-m">
         Now submit your claim
       </h2>
 
-      <p>
+      <p class="govuk-body">
         By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 

@@ -4,11 +4,55 @@
   Your account – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block stylesheets %}
+  {{ super() }}
+  <style>
+    .claim-summary-box {
+      border: 1px solid #b1b4b6;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .claim-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .claim-meta-item {
+      flex: 1 1 160px;
+      min-width: 0;
+    }
+
+    .claim-meta-item p {
+      overflow-wrap: break-word;
+    }
+
+    @media (max-width: 640px) {
+      .claim-summary-box {
+        padding: 15px;
+      }
+
+      .claim-meta-row {
+        display: block;
+      }
+
+      .claim-meta-item {
+        margin-bottom: 15px;
+      }
+
+      .claim-meta-item:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+{% endblock %}
+
 {% block beforeContent %}
   {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -19,29 +63,34 @@
       <h1 class="govuk-heading-l">Your account</h1>
 
       <p class="govuk-body">Welcome back, Lori Thomson (Staff ID: ABC-12345)</p>
-      
+
+      <div class="claim-summary-box">
+        <h2 class="govuk-heading-m">Account summary</h2>
+
+        <div class="claim-meta-row">
+          <div class="claim-meta-item">
+            <p class="govuk-body-s govuk-!-margin-bottom-1">Claims this year</p>
+            <p class="govuk-body govuk-!-font-weight-bold">12</p>
+          </div>
+
+          <div class="claim-meta-item">
+            <p class="govuk-body-s govuk-!-margin-bottom-1">Amount claimed</p>
+            <p class="govuk-body govuk-!-font-weight-bold">£146.80</p>
+          </div>
+
+          <div class="claim-meta-item">
+            <p class="govuk-body-s govuk-!-margin-bottom-1">Last payment</p>
+            <p class="govuk-body govuk-!-font-weight-bold">25 April 2025</p>
+          </div>
+        </div>
+      </div>
+
       <h2 class="govuk-heading-m">Your recent claims</h2>
-      
-    
 
       {% set completedStatus = {
         text: "Completed"
       } %}
-      
-      {% set pendingStatus = {
-        tag: {
-          text: "Pending",
-          classes: "govuk-tag--blue"
-        }
-      } %}
-      
-      {% set incompleteStatus = {
-        tag: {
-          text: "Incomplete",
-          classes: "govuk-tag--grey"
-        }
-      } %}
-      
+
       {{ govukTaskList({
         idPrefix: "claims-task-list",
         items: [
@@ -62,11 +111,12 @@
         ]
       }) }}
 
-       {{ govukButton({
+      {{ govukButton({
         text: "Start a new claim",
         href: "/start",
         isStartButton: false
       }) }}
+
     </div>
   </div>
 

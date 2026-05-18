@@ -36,7 +36,7 @@
           <td class="govuk-table__cell"><p><strong>Headings not styled correctly</strong>
              Headings are not styled correctly on this page, the 'Claim lunch expenses' looks like a heading but itsn't styled using the h1 tag, the h1 starts at the 'before you start' content.</p>
              <p><strong>Altered tab order on side menu</strong>
-The tab order is a bit random, when you're tabbing through the list of links on the right-hand side of the page. This is unpredictable, and a bit disorienting. While it's not a huge issue in this scenario, if the links were further apart on the page, or there were a lot of links it could cause issues for users who use a screen magnifier or browser zoom. They might not be able to tell where focus is gone, and have to hunt from it, or might have had their screen view dragged across the page as it's following focus (depending on how they've configured their assistive technologies).</p>
+The tab order is a bit random, when you're tabbing through interactive elements and the list of links on the right-hand side of the page. This is unpredictable, and a bit disorienting. While it's not a huge issue in this scenario, if the links were further apart on the page, or there were a lot of links it could cause issues for users who use a screen magnifier or browser zoom. They might not be able to tell where focus is gone, and have to hunt from it, or might have had their screen view dragged across the page as it's following focus (depending on how they've configured their assistive technologies).</p>
 <p><strong>Link opens in new tab</strong>
 Opening a link in a new tab can be appropriate if you tell the user in advance that it's going to happen. This can be done with either with content in the link text or with an icon that has appropriate alternative text. In this case, neither of these techniques have been used. This is an issue because the user may not be aware the the new tab or windows has opened. They then can't use the back button on the keyboard to navigate to where they were, as a new tab history has been opened.</p>        
 <p><strong>Undescriptive link text</strong>
@@ -51,7 +51,13 @@ If the focus state style doesn't have a high enough contrast and it can be reall
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Account page</td>
           <td class="govuk-table__cell"><a href="/account">/account</a></td>
-          <td class="govuk-table__cell">There are no accessibility issues on this page</td>
+          <td class="govuk-table__cell">
+  <p><strong>Content does not reflow correctly on smaller screens</strong>
+  This page appears fine on desktop, but when viewed on a smaller screen or at high zoom levels, users need to scroll horizontally to read the content. This can make the page difficult to use for people with low vision who zoom in, or users accessing the service on mobile devices. Content should reflow properly without requiring horizontal scrolling at 320px wide or 400% zoom.</p>
+
+  <p><strong>Fixed-width content causes horizontal scrolling</strong>
+  Some sections on the page use fixed widths and prevent the content from adapting to smaller screen sizes. Users may miss information or need to scroll in multiple directions to complete tasks. The fix would be allowing the layout and summary sections to resize naturally using responsive widths and wrapping content appropriately.</p>
+</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Account complete page</td>
