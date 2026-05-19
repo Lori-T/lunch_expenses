@@ -27,6 +27,12 @@
     .related-link-third {
       order: 3;
     }
+
+    .no-focus-outline:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      background: none !important;
+    }
   </style>
 {% endblock %}
 
@@ -118,7 +124,7 @@
       <h1 class="govuk-heading-m">Before you start</h1>
 
       <p class="govuk-body">
-        You can also <a href="mailto:claims@claims.com">submit your claim by email</a>.
+        You can also <a href="mailto:claims@claims.com" class="no-focus-outline">submit your claim by email</a>.
       </p>
 
       <p class="govuk-body">
